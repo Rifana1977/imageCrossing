@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero DNA Splicer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Superhero DNA Splicer</h1>
+        <p>Select two animals to create your superhero!</p>
+
+        <div class="animal-selection">
+            <div>
+                <label for="animal1">Choose Animal 1:</label>
+                <div class="dropdown" id="dropdown1" onclick="toggleDropdown('dropdown1')">
+                    <img id="animal1Image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe5DWcuSUKBOG35IINuin_vM5uMTwvIWiLjw&s" alt="Giraffe">
+                </div>
+                <div class="dropdown-content" id="dropdown1Content">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe5DWcuSUKBOG35IINuin_vM5uMTwvIWiLjw&s" alt="Giraffe" onclick="selectAnimal(1, 'giraffe')">
+                    <img src="https://www.shutterstock.com/image-photo/cheetah-hideaway-resting-natures-lap-600nw-2340314981.jpg" alt="Cheetah" onclick="selectAnimal(1, 'cheetah')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdWPrif-V231JcsICWcduyakrV-jOWfIOh-A&s" alt="Eagle" onclick="selectAnimal(1, 'eagle')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUutueGq6hos0KVJ-YNcuTBehC1KkRMV98hg&s" alt="Elephant" onclick="selectAnimal(1, 'elephant')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaYwhMYpAP7K6wvttga3vn3ridmBYVXYyO3g&s" alt="Crow" onclick="selectAnimal(1, 'crow')">
+                </div>
+            </div>
+
+            <div>
+                <label for="animal2">Choose Animal 2:</label>
+                <div class="dropdown" id="dropdown2" onclick="toggleDropdown('dropdown2')">
+                    <img id="animal2Image" src="https://www.shutterstock.com/image-photo/cheetah-hideaway-resting-natures-lap-600nw-2340314981.jpg" alt="Cheetah">
+                </div>
+                <div class="dropdown-content" id="dropdown2Content">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe5DWcuSUKBOG35IINuin_vM5uMTwvIWiLjw&s" alt="Giraffe" onclick="selectAnimal(2, 'giraffe')">
+                    <img src="https://www.shutterstock.com/image-photo/cheetah-hideaway-resting-natures-lap-600nw-2340314981.jpg" alt="Cheetah" onclick="selectAnimal(2, 'cheetah')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdWPrif-V231JcsICWcduyakrV-jOWfIOh-A&s" alt="Eagle" onclick="selectAnimal(2, 'eagle')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUutueGq6hos0KVJ-YNcuTBehC1KkRMV98hg&s" alt="Elephant" onclick="selectAnimal(2, 'elephant')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaYwhMYpAP7K6wvttga3vn3ridmBYVXYyO3g&s" alt="Crow" onclick="selectAnimal(2, 'crow')">
+                </div>
+            </div>
+        </div>
+
+        <button onclick="createSuperhero()">Create Superhero</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
